@@ -49,8 +49,8 @@ export default {
       d: [{
         id: 0,
         img: './dist/logo.png',
-        targetWidth: 100,
-        targetHeight: 100,
+        targetWidth: '100%',
+        targetHeight: '100%',
         translate3dInfo: {
           rotation: 0,
           scale: 1,
@@ -61,8 +61,8 @@ export default {
       }, {
         id: 1,
         img: './dist/logo.png',
-        targetWidth: 200,
-        targetHeight: 200,
+        targetWidth: '200px',
+        targetHeight: '200px',
         translate3dInfo: {
           rotation: 0,
           scale: 1,

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div :style="{width: targetWidth + 'px', height: targetHeight + 'px', backgroundColor: backgroundColor, overflow:'hidden' }">
+    <div :style="{width: targetWidth, height: targetHeight, backgroundColor: backgroundColor, overflow:'hidden' }">
     </div>
   </div>
 </template>
@@ -22,12 +22,12 @@ export default {
       default: 0.5
     },
     targetWidth: {
-      type: Number,
-      default: 100
+      type: String,
+      default: '100px'
     },
     targetHeight: {
-      type: Number,
-      default: 100
+      type: String,
+      default: '100px'
     },
     backgroundColor: {
       type: String,
