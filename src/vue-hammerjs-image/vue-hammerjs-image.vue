@@ -63,6 +63,9 @@ export default {
     },
     'translate3dInfo.offset_y': function(n, o) {
       this.__hi.setTranslate3dInfo({ offset_y: n }).preview()
+    },
+    'img': function(n, o) {
+      this.__hi.changeImg(n)
     }
   },
   mounted() {

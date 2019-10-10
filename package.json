@@ -2,7 +2,7 @@
   "name": "vue-hammerjs-image",
   "main": "./dist/vue-hammerjs-image.js",
   "description": "A Vue.js project for hammerjs-image",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "rzl <1120082028@qq.com>",
   "license": "MIT",
   "private": false,
@@ -24,7 +24,7 @@
   },
   "homepage": "https://github.com/rzl/vue-hammerjs-image#readme",
   "dependencies": {
-    "hammerjs-image": "^1.0.3"
+    "hammerjs-image": "^1.0.5"
   },
   "browserslist": [
     "> 1%",

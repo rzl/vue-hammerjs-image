@@ -20,10 +20,11 @@
           step="1" 
           value="0">
         <button @click="m_click(item)">裁剪</button>
+        <input type="file" accept="image/*" @change="(e) => {m_change(e, item)}">
       </div>
       <div style="display: inline-block">
         <VueHammerjsImage 
-          img="./dist/logo.png" 
+          :img="item.img" 
           :targetWidth="item.targetWidth" 
           :targetHeight="item.targetHeight"
           :ref="'VueHammerjsImage' + item.id" 
@@ -47,6 +48,7 @@ export default {
     return {
       d: [{
         id: 0,
+        img: './dist/logo.png',
         targetWidth: 100,
         targetHeight: 100,
         translate3dInfo: {
@@ -58,6 +60,7 @@ export default {
         showSrc: ''
       }, {
         id: 1,
+        img: './dist/logo.png',
         targetWidth: 200,
         targetHeight: 200,
         translate3dInfo: {
@@ -79,6 +82,15 @@ export default {
     },
     m_click(item) {
       item.showSrc = this.$refs['VueHammerjsImage' + item.id][0].getBase64()
+    },
+    m_change(e, item) {
+      console.log(e)
+      var file = e.target.files[0]
+      var fileReader = new FileReader()
+      fileReader.onload = function (){
+          item.img = fileReader.result
+      }
+      fileReader.readAsDataURL(file)
     }
   }
 }
